@@ -18,12 +18,12 @@ Narzędzia:
     - [Chef](https://www.chef.io/)
 
 Przykłady:
-- ...
-- ...
-- ...
+- [Terraform + AWS](episode-001/terraform-aws/)
+- [Terraform + OCI](episode-001/terraform-oracle/)
+- [Ansible](episode-001/ansible/)
 
-### 2 - W jaki sposób definiowac infrastrukturze w chmurze za pomocą kodu ?
+### Odcinek 2 - W jaki sposób definiowac infrastrukturze w chmurze za pomocą kodu ?
 
 Przykłady:
-- [aplikacja webowa z bazą danych]()
-- [funkcjo do wysyłania powiadomień mailowych]()
+- [aplikacja webowa z bazą danych](episode-002/terraform-oracle/)
+- [funkcjo do wysyłania powiadomień mailowych](episode-002/pulumi-aws/)
