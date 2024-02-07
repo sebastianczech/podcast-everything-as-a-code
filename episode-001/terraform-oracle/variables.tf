@@ -19,25 +19,27 @@ variable "ssh_public_key_path" {
   default     = "~/.ssh/id_rsa.pub"
 }
 
-variable "network" {
-  description = "Object describing VCN"
-  type = object({
-    name = optional(string, "demo")
-    cidr = string
+variable "networks" {
+  description = "Map of objects describing VCN"
+  type = map(object({
+    name   = string
+    cidr   = string
+    public = optional(bool, false)
     subnets = map(object({
       name = string
       cidr = string
     }))
-  })
+  }))
 }
 
 variable "vms" {
   description = "Map of objects defining virtual machines"
   type = map(object({
-    name   = string
-    shape  = optional(string, "VM.Standard.A1.Flex")
-    public = optional(bool, false)
-    az     = number
-    subnet = string
+    name    = string
+    shape   = optional(string, "VM.Standard.A1.Flex")
+    public  = optional(bool, false)
+    az      = number
+    network = string
+    subnet  = string
   }))
 }

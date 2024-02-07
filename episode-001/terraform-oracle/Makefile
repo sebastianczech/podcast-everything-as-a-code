@@ -1,5 +1,5 @@
 auth:
-	oci session authenticate --region eu-frankfurt-1 --profile-name podcast-evcode
+	oci session authenticate --region eu-frankfurt-1 --profile-name podcast-evcode --session-expiration-in-minutes 180
 
 init:
 	terraform init --upgrade
