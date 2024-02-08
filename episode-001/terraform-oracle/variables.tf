@@ -25,6 +25,12 @@ variable "networks" {
     name   = string
     cidr   = string
     public = optional(bool, false)
+    peer   = optional(string)
+    routes = map(object({
+      name        = string
+      destination = string
+      type        = string
+    }))
     subnets = map(object({
       name = string
       cidr = string

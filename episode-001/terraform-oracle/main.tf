@@ -22,6 +22,54 @@ resource "oci_core_subnet" "this" {
   display_name = "${var.prefix}-${each.value.name}"
 }
 
+# https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformbestpractices_topic-vcndefaults.htm
+# https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_route_table
+resource "oci_core_default_route_table" "this" {
+  for_each = var.networks
+
+  compartment_id = var.compartment_id
+
+  manage_default_resource_id = oci_core_vcn.this[each.key].default_route_table_id
+  display_name               = "${var.prefix}-${each.value.name}-rt"
+  dynamic "route_rules" {
+    for_each = each.value.public ? ["one"] : []
+    content {
+      network_entity_id = oci_core_internet_gateway.this[each.key].id
+      destination       = "0.0.0.0/0"
+      destination_type  = "CIDR_BLOCK"
+    }
+  }
+  dynamic "route_rules" {
+    for_each = each.value.routes
+    content {
+      network_entity_id = (
+        route_rules.value.type == "local_peering_gateway_local" ? oci_core_local_peering_gateway.local[each.key].id : (
+        route_rules.value.type == "local_peering_gateway_remote" ? oci_core_local_peering_gateway.remote[each.key].id : null)
+      )
+      destination      = route_rules.value.destination
+      destination_type = "CIDR_BLOCK"
+    }
+  }
+}
+
+# https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_local_peering_gateway
+resource "oci_core_local_peering_gateway" "local" {
+  for_each = { for k, v in var.networks : k => v if v.peer != null }
+
+  compartment_id = var.compartment_id
+  vcn_id         = oci_core_vcn.this[each.key].id
+  display_name   = "${var.prefix}-${each.value.name}-peer"
+  peer_id        = oci_core_local_peering_gateway.remote[each.value.peer].id
+}
+
+resource "oci_core_local_peering_gateway" "remote" {
+  for_each = { for k, v in var.networks : k => v if v.peer == null }
+
+  compartment_id = var.compartment_id
+  vcn_id         = oci_core_vcn.this[each.key].id
+  display_name   = "${var.prefix}-${each.value.name}-peer"
+}
+
 # https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_internet_gateway
 resource "oci_core_internet_gateway" "this" {
   for_each = { for k, v in var.networks : k => v if v.public }
