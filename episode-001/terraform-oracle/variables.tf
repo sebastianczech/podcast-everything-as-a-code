@@ -35,6 +35,24 @@ variable "networks" {
       name = string
       cidr = string
     }))
+    security = object({
+      egress = map(object({
+        protocol         = string
+        destination      = string
+        destination_type = string
+        description      = string
+      }))
+      ingress = map(object({
+        protocol     = string
+        source       = string
+        source_type  = string
+        description  = string
+        tcp_port_min = optional(number)
+        tcp_port_max = optional(number)
+        icmp_type    = optional(number)
+        icmp_code    = optional(number)
+      }))
+    })
   }))
 }
 

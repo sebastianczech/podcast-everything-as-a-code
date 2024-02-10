@@ -81,6 +81,77 @@ resource "oci_core_internet_gateway" "this" {
   # route_table_id =
 }
 
+# https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_security_list
+resource "oci_core_default_security_list" "this" {
+  for_each = var.networks
+
+  compartment_id = var.compartment_id
+
+  manage_default_resource_id = oci_core_vcn.this[each.key].default_security_list_id
+  display_name               = "${var.prefix}-${each.value.name}-sec"
+  dynamic "egress_security_rules" {
+    for_each = each.value.security.egress
+    iterator = security_rule
+    content {
+      protocol         = security_rule.value.protocol
+      destination      = security_rule.value.destination
+      destination_type = security_rule.value.destination_type
+      description      = security_rule.value.description
+    }
+  }
+  dynamic "ingress_security_rules" {
+    for_each = {
+      for k, v in each.value.security.ingress : k => v if v.protocol == "6"
+    }
+    iterator = security_rule
+    content {
+      protocol    = security_rule.value.protocol
+      source      = security_rule.value.source
+      source_type = security_rule.value.source_type
+      description = security_rule.value.description
+      tcp_options {
+        max = security_rule.value.tcp_port_max
+        min = security_rule.value.tcp_port_min
+      }
+    }
+  }
+  dynamic "ingress_security_rules" {
+    for_each = {
+      for k, v in each.value.security.ingress : k => v if v.protocol == "1"
+    }
+    iterator = security_rule
+    content {
+      protocol    = security_rule.value.protocol
+      source      = security_rule.value.source
+      source_type = security_rule.value.source_type
+      description = security_rule.value.description
+      icmp_options {
+        type = security_rule.value.icmp_type
+        code = security_rule.value.icmp_code
+      }
+    }
+  }
+}
+
+# https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_dhcp_options
+resource "oci_core_default_dhcp_options" "dhcp_options_producer" {
+  for_each = var.networks
+
+  compartment_id = var.compartment_id
+
+  manage_default_resource_id = oci_core_vcn.this[each.key].default_dhcp_options_id
+  display_name               = "${var.prefix}-${each.value.name}-dhcp"
+
+  options {
+    type        = "DomainNameServer"
+    server_type = "VcnLocalPlusInternet"
+  }
+  options {
+    type                = "SearchDomain"
+    search_domain_names = ["${var.prefix}.oci.com"]
+  }
+}
+
 # TODO: uncomment when I figure out the reason
 # Currentyl there is an error: 400-LimitExceeded, NAT gateway limit per VCN reached
 # Probably Oracle has recently disabled NAT gateways for Always Free accounts
