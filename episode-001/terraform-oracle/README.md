@@ -13,13 +13,7 @@
   
 ## Usage
 
-```
-cp example.tfvars terraform.tfvars
-terraform init
-
-terraform fmt -recursive
-terraform validate
-
-terraform plan
-terraform apply -auto-approve
-```
+1. Prepare variables values by copying example and update lines with `# TODO`: `cp example.tfvars terraform.tfvars`
+2. Initialize Terraform: `terraform init`
+3. Check plan: `terraform plan`
+4. Deploy infrastructure: `terraform apply -auto-approve`
