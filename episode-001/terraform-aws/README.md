@@ -1,15 +1,15 @@
-# Terraform for OCI (Oracle Cloud Infrastructure)
+# Terraform for AWS (Amazon Web Services)
 
 ## Links
 
-* [OCI Cloud Free Tier - Always Free cloud service](https://www.oracle.com/uk/cloud/free/#always-free)
-* [Oracle Cloud Infrastructure Provider](https://registry.terraform.io/providers/oracle/oci/latest/docs)
-* [Build infrastructure with Terraform on OCI](https://developer.hashicorp.com/terraform/tutorials/oci-get-started/oci-build)
+* [AWS Free Tier](https://aws.amazon.com/free/)
+* [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+* [Get Started - AWS](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
 
 ## Prerequisites
 
 * Installed tool [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-* Account on [Oracle Cloud Infrastructure](https://cloud.oracle.com/)
+* Account on [AWS](https://aws.amazon.com/console/)
   
 ## Usage
 
