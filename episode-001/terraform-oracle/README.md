@@ -8,12 +8,13 @@
 
 ## Prerequisites
 
-* Installed tool [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+* Installed tool [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) and [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
 * Account on [Oracle Cloud Infrastructure](https://cloud.oracle.com/)
   
 ## Usage
 
-1. Prepare variables values by copying example and update lines with `# TODO`: `cp example.tfvars terraform.tfvars`
-2. Initialize Terraform: `terraform init`
-3. Check plan: `terraform plan`
-4. Deploy infrastructure: `terraform apply -auto-approve`
+1. Authenticate in Oracle cloud: `oci session authenticate --region eu-frankfurt-1 --profile-name podcast-evcode --session-expiration-in-minutes 180`
+2. Prepare variables values by copying example and update lines with `# TODO`: `cp example.tfvars terraform.tfvars`
+3. Initialize Terraform: `terraform init`
+4. Check plan: `terraform plan`
+5. Deploy infrastructure: `terraform apply -auto-approve`
