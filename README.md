@@ -20,7 +20,7 @@ Narzędzia:
 Przykłady:
 - [Terraform + AWS](episode-001/terraform-aws/)
 - [Terraform + OCI](episode-001/terraform-oracle/)
-- [Ansible](episode-001/ansible/)
+- [Ansible](episode-001/ansible-local/)
 
 ### Odcinek 2 - W jaki sposób definiowac infrastrukturze w chmurze za pomocą kodu ?
 
