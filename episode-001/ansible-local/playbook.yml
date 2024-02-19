@@ -1,0 +1,12 @@
+---
+  - name: "Ansible on localhost"
+    hosts: localhost
+    connection: local 
+    tasks:
+
+    - name: "Get list of files in current directory"
+      shell: "ls -al"
+      register: "output"
+
+    - name: "List all files in current directory"
+      debug: var=output.stdout_lines
