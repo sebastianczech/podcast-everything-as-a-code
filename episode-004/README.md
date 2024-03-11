@@ -1,5 +1,11 @@
 # Odcinek 4 - Co oznacza idempotentny, deklaratywny, imperatywny ?
 
+Materiały:
+- [The Zen of Ansible - Declarative is better than imperative – most of the time](https://www.ansible.com/blog/the-zen-of-ansible)
+- [Provisioners Without a Resource](https://developer.hashicorp.com/terraform/language/resources/provisioners/null_resource)
+- [Imperative vs Declarative IaC: Ansible and Terraform](https://www.casperfeng.com/blog/imperative-vs-declarative-iac-ansible-and-terraform-insights)
+- [Declarative vs. Imperative Infrastructure As Code](https://openupthecloud.com/declarative-vs-imperative-infra/)
+
 Przykłady:
 
 - Ansible - deklaratywny moduł:
