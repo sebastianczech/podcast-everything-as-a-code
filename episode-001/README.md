@@ -16,6 +16,6 @@ Narzędzia:
     - [Chef](https://www.chef.io/)
 
 Przykłady:
-- [Terraform + AWS](episode-001/terraform-aws/)
-- [Terraform + OCI](episode-001/terraform-oracle/)
-- [Ansible](episode-001/ansible-local/)
+- [Terraform + AWS](terraform-aws/)
+- [Terraform + OCI](terraform-oracle/)
+- [Ansible](ansible-local/)
