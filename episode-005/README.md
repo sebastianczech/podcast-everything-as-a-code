@@ -15,6 +15,9 @@ Materiały:
   * [Spacelift - OpenTofu Tutorial – Getting Started, How to Install & Examples](https://spacelift.io/blog/opentofu-tutorial)
   * [Spacelift - Testing your Configuration with OpenTofu](https://www.youtube.com/watch?v=XjCS3vKLpkw&ab_channel=Spacelift)
 
+Kurs:
+  * [Test IaC on AWS](https://github.com/sebastianczech/aws-terratest-course)
+
 Przykłady:
 
 1. Przygotowanie kodu infrastruktury:
