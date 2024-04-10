@@ -104,6 +104,7 @@ resource "aws_lambda_permission" "allow_iam_user" {
   principal              = data.aws_iam_user.iam_user_seba.arn
 }
 
+# example of e2e test using check block, which validates infrastructure after Terraform applies changes
 check "lambda_deployed" {
   data "external" "this" {
     program = ["curl", "${aws_lambda_function_url.lambda_tf_demo_endpoint.function_url}"]

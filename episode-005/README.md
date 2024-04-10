@@ -8,6 +8,7 @@ Materiały:
   * [TDD vs TLD and what is the minimum code coverage needed](https://medium.com/swlh/tdd-vs-tld-and-what-is-the-minimum-code-coverage-needed-f380181d3400)
   * [DevOpsDays Warsaw 2022 - Sebastian Czech - Build infrastructure as a code (IaC) using test-later development (TLD) method](https://youtu.be/XY5LD2zy0eY?si=5BFggg3qJIpNGRln)
   * [HashiCorp - Tests - testing framework is available in Terraform v1.6.0 and later](https://developer.hashicorp.com/terraform/language/tests)
+  * [HashiCorp - Checks - validate your infrastructure outside the usual resource lifecycle](https://developer.hashicorp.com/terraform/language/checks)
   * [HashiCorp - Mocks - mocking is available in Terraform v1.7.0 and later](https://developer.hashicorp.com/terraform/language/tests/mocking)
   * [HashiCorp - Terraform 1.7 adds test mocking and config-driven remove](https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove)
   * [OpenTofu - Command: test](https://opentofu.org/docs/cli/commands/test/)

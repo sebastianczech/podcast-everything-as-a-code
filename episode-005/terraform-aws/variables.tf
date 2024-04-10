@@ -1,3 +1,4 @@
+# example of contract tests using variables validation
 variable "region" {
   description = "AWS region"
   type        = string
