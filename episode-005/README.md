@@ -27,25 +27,25 @@ Przykłady:
 terraform init
 ```
 
-2. Walidacja:
+1. Testy jednostkowe - [Terraform validate](https://developer.hashicorp.com/terraform/cli/commands/validate):
 
 ```bash
 terraform validate
 ```
 
-3. Testy kontraktowe:
+3. Testy kontraktowe - [Terraform validations for variables](https://www.terraform.io/language/values/variables) oraz [Terraform lifecycle pre-conditions for resources](https://www.terraform.io/language/expressions/custom-conditions):
 
 ```bash
 terraform plan
 ```
 
-4. Testy integracyjne:
+4. Testy integracyjne - [Terraform mocks](https://developer.hashicorp.com/terraform/language/tests/mocking):
 
 ```bash
 // mock
 ```
 
-5. Test funkcjonalne (E2E):
+5. Test funkcjonalne (E2E) - [Terraform tests](https://developer.hashicorp.com/terraform/language/tests) oraz [Terraform checks](https://developer.hashicorp.com/terraform/language/checks):
 
 ```bash
 terraform test
