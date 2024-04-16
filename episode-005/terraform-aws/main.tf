@@ -23,13 +23,20 @@ resource "aws_lambda_function" "lambda_tf_demo" {
   role             = aws_iam_role.lambda_tf_demo_role.arn
   source_code_hash = filebase64sha256("files/tf_demo.zip")
 
-  runtime = "python3.9"
+  runtime = var.runtime
   handler = "tf_demo.lambda_handler"
   timeout = 10
 
   environment {
     variables = {
       foo = "bar"
+    }
+  }
+
+  lifecycle {
+    precondition {
+      condition     = startswith(var.runtime, "python")
+      error_message = "Python runtime is required to deploy Lambda"
     }
   }
 }

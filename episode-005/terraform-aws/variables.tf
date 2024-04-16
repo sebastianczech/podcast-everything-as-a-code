@@ -22,3 +22,8 @@ variable "prefix" {
   }
 }
 
+variable "runtime" {
+  description = "Runtime envinronment used to execute code"
+  type        = string
+  default     = "python3.9"
+}
