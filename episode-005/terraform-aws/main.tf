@@ -137,13 +137,13 @@ resource "aws_lambda_permission" "allow_iam_user" {
 
 # example of e2e test using check block, which validates infrastructure after Terraform applies changes
 check "lambda_deployed" {
-  data "external" "this" {
-    program = ["curl", "${aws_lambda_function_url.lambda_tf_demo_endpoint.function_url}"]
+  data "http" "terraform_io" {
+    url = aws_lambda_function_url.lambda_tf_demo_endpoint.function_url
   }
 
   assert {
     # If we execution function using URL without authentication, then it should be received forbidden message, if Lambda is deployed correctly
-    condition = data.external.this.result.Message == "Forbidden"
+    condition = data.http.terraform_io.status_code == 403
     error_message = format("The Lambda %s is not deployed.",
       aws_lambda_function.lambda_tf_demo.function_name
     )
