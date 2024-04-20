@@ -62,7 +62,7 @@ variable "region" {
 }
 ```
 
-[Przygotowane został przykład walidacji zasobów](terraform-aws/main.tf):
+[Przygotowany został również przykład walidacji zasobów](terraform-aws/main.tf):
 
 ```hcl
 resource "aws_lambda_function" "lambda_tf_demo" {
