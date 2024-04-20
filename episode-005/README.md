@@ -15,6 +15,7 @@ Materiały:
   * [OpenTofu - What We Learned While Working on OpenTofu's New Test Feature](https://opentofu.org/blog/what-we-learned-while-working-on-opentofus-new-test-feature/)
   * [Spacelift - OpenTofu Tutorial – Getting Started, How to Install & Examples](https://spacelift.io/blog/opentofu-tutorial)
   * [Spacelift - Testing your Configuration with OpenTofu](https://www.youtube.com/watch?v=XjCS3vKLpkw&ab_channel=Spacelift)
+  * [A Comprehensive Guide to Testing in Terraform: Keep your tests, validations, checks, and policies in order](https://medium.com/@mattiasfjellstrom/a-comprehensive-guide-to-testing-in-terraform-keep-your-tests-validations-checks-and-policies-038056da0a59)
 
 Kurs:
   * [Test IaC on AWS](https://github.com/sebastianczech/aws-terratest-course)
@@ -42,11 +43,11 @@ terraform plan
 4. Testy integracyjne - [Terraform mocks](https://developer.hashicorp.com/terraform/language/tests/mocking):
 
 ```bash
-// mock
+terraform test -filter=test_mock.tftest.hcl
 ```
 
 5. Test funkcjonalne (E2E) - [Terraform tests](https://developer.hashicorp.com/terraform/language/tests) oraz [Terraform checks](https://developer.hashicorp.com/terraform/language/checks):
 
 ```bash
-terraform test
+terraform test -filter=test_e2e.tftest.hcl
 ```
