@@ -1,7 +1,7 @@
 # Odcinek 6 - Jak zbudowac pipeline do wdrazania zmian w infrastrukturze ?
 
 Materiały:
-* dobre praktykiy:
+* dobre praktyki:
   * [Checkov - Policy-as-code for everyone](https://www.checkov.io/)
   * [pre-commit - a framework for managing and maintaining multi-language pre-commit hooks](https://pre-commit.com/)
   * [terraform-doc - a utility to generate documentation from Terraform modules in various output formats](https://github.com/terraform-docs/terraform-docs)
@@ -29,4 +29,4 @@ Przykłady:
    * formatowanie kodu
    * generowanie dokumentacj
    * testy bezpieczeństwa za pomocą narzędzia `Checkov`
-* [Testy jednotkowe, kontraktowe, integracyjne oraz funkcjonalne ][https://github.com/sebastianczech/podcast-everything-as-a-code/blob/main/episode-005/README.md]
+* [Testy jednotkowe, kontraktowe, integracyjne oraz funkcjonalne][https://github.com/sebastianczech/podcast-everything-as-a-code/blob/main/episode-005/README.md]
