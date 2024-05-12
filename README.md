@@ -5,3 +5,4 @@
 - [Odcinek 3 - Klaster Kubernetes do nauki](episode-003/README.md)
 - [Odcinek 4 - Co oznacza idempotentny, deklaratywny, imperatywny ?](episode-004/README.md)
 - [Odcinek 5 - Testowanie infrastruktury, piramida testów](episode-005/README.md)
+- [Odcinek 6 - Jak zbudowac pipeline do wdrazania zmian w infrastrukturze ?](episode-006/README.md)
