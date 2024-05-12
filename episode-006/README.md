@@ -29,4 +29,4 @@ Przykłady:
    * formatowanie kodu
    * generowanie dokumentacj
    * testy bezpieczeństwa za pomocą narzędzia `Checkov`
-* [Testy jednotkowe, kontraktowe, integracyjne oraz funkcjonalne][https://github.com/sebastianczech/podcast-everything-as-a-code/blob/main/episode-005/README.md]
+* [Testy jednotkowe, kontraktowe, integracyjne oraz funkcjonalne](https://github.com/sebastianczech/podcast-everything-as-a-code/blob/main/episode-005/README.md)
