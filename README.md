@@ -6,4 +6,4 @@
 - [Odcinek 4 - Co oznacza idempotentny, deklaratywny, imperatywny ?](episode-004/README.md)
 - [Odcinek 5 - Testowanie infrastruktury, piramida testów](episode-005/README.md)
 - [Odcinek 6 - Jak zbudowac pipeline do wdrazania zmian w infrastrukturze ?](episode-006/README.md)
-- [Odcinek 7 - Flux, ArgoCD - jak zacząc pracę z uzyciem GitOps ?]()
+- [Odcinek 7 - Flux, ArgoCD - jak zacząc pracę z uzyciem GitOps ?](episode-007/README.md)
