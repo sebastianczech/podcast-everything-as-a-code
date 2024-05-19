@@ -7,3 +7,5 @@
 - [Odcinek 5 - Testowanie infrastruktury, piramida testów](episode-005/README.md)
 - [Odcinek 6 - Jak zbudowac pipeline do wdrazania zmian w infrastrukturze ?](episode-006/README.md)
 - [Odcinek 7 - Flux, ArgoCD - jak zacząc pracę z uzyciem GitOps ?](episode-007/README.md)
+- [Odcinek 8 - Jak zbudowac własny modul w Terraform ?](episode-008/README.md)
+- [Odcinek 9 - Czy jest HCP Terraform, dawniej Terraform Cloud ?](episode-009/README.md)
