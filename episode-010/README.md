@@ -24,3 +24,52 @@ Materiały:
   - [Dependabot - Automated dependency updates built into GitHub](https://github.com/dependabot)
   - [Checkov - Integrating with CI/CD](https://www.checkov.io/1.Welcome/Feature%20Descriptions.html)
   - [Trivy - comprehensive and versatile security scanner](https://github.com/aquasecurity/trivy)
+
+Przykłady:
+
+1. [Uwierzytelnianie w chmurze AWS za pomocą OpenID Connect w GitHub](https://github.com/aws-actions/configure-aws-credentials):
+```yaml
+name: Run AWS with OIDC
+on: [push]
+
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-region: us-east-2
+        role-to-assume: arn:aws:iam::123456789100:role/my-github-actions-role
+        role-session-name: MySessionName
+```
+
+2. [Uwierzytelnianie w chmurze Azure za pomocą OpenID Connect w GitHub](https://github.com/Azure/login):
+```yaml
+name: Run Azure Login with OIDC
+on: [push]
+
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Azure CLI script
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az account show
+```
