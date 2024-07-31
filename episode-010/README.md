@@ -13,7 +13,7 @@ Materiały:
 - Minimal permissions (from CI/CD perspective):
   - [GitHub Actions](https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
   - [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/pipelines/policies/permissions?view=azure-devops)
-- Minimal permissions (from cloud perspective)"
+- Minimal permissions (from cloud perspective):
   - [Configuring a role for GitHub OIDC identity provider](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html#idp_oidc_Create_GitHub)
   - [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#openid-connect-scopes)
 - [Review third party actions](https://www.stepsecurity.io/blog/third-party-github-actions-governance-best-practices)
