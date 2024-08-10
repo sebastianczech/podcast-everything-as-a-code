@@ -10,3 +10,4 @@
 - [Odcinek 8 - Jak zbudowac własny modul w Terraform ?](episode-008/README.md)
 - [Odcinek 9 - Czy jest HCP Terraform, dawniej Terraform Cloud ?](episode-009/README.md)
 - [Odcinek 10 - Uwierzytelnianie i dane wrażlie w pipeline CI/CD](episode-010/README.md)
+- [Odcinek 11 - W jaki sposób zautomazytować wydawania kolejnych wersji paczki z kodem źródłowym lub aplikacją w GitHub ?](episode-011/README.md)
