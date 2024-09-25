@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: use own module
+      my_module:
+        name: podcast
+        new: true
