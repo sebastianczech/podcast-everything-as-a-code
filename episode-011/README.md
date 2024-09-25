@@ -1,4 +1,4 @@
-# OOdcinek 11 - W jaki sposób zautomazytować wydawania kolejnych wersji paczki z kodem źródłowym lub aplikacją w GitHub ?
+# Odcinek 11 - W jaki sposób zautomazytować wydawania kolejnych wersji paczki z kodem źródłowym lub aplikacją w GitHub ?
 
 Materiały:
 - narzędzia:
