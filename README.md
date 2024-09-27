@@ -13,3 +13,4 @@
 - [Odcinek 11 - W jaki sposób zautomazytować wydawania kolejnych wersji paczki z kodem źródłowym lub aplikacją w GitHub ?](episode-011/README.md)
 - [Odcinek 12 - Jak zaczac przygode z Ansible ?](episode-012/README.md)
 - [Odcinek 13 - Jak zbudowac własny moduł w Ansible ?](episode-013/README.md)
+- [Odcinek 14 - Jak wykonac diagram za pomoca kodu ?](episode-014/README.md)
