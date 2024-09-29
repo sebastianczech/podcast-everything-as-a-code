@@ -1,8 +1,5 @@
 # Odcinek 14 - Jak wykonac diagram za pomoca kodu ?
 
-Materiały:
-- 
-
 Narzędzia:
 - [diagrams as a code](https://diagrams.mingrammer.com/)
 - [PlantUML](https://plantuml.com/)

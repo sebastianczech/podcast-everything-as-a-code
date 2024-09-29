@@ -14,3 +14,4 @@
 - [Odcinek 12 - Jak zaczac przygode z Ansible ?](episode-012/README.md)
 - [Odcinek 13 - Jak zbudowac własny moduł w Ansible ?](episode-013/README.md)
 - [Odcinek 14 - Jak wykonac diagram za pomoca kodu ?](episode-014/README.md)
+- [Odcinek 15 - Jak przygotowac prezentacje za pomoca kodu ?](episode-015/README.md)
