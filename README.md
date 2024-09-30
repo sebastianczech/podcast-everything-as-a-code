@@ -15,3 +15,4 @@
 - [Odcinek 13 - Jak zbudowac własny moduł w Ansible ?](episode-013/README.md)
 - [Odcinek 14 - Jak wykonac diagram za pomoca kodu ?](episode-014/README.md)
 - [Odcinek 15 - Jak przygotowac prezentacje za pomoca kodu ?](episode-015/README.md)
+- [Odcinek 16 - Generowanie dokumentacji z kodu źródłowego](episode-016/README.md)
