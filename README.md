@@ -16,3 +16,7 @@
 - [Odcinek 14 - Jak wykonac diagram za pomoca kodu ?](episode-014/README.md)
 - [Odcinek 15 - Jak przygotowac prezentacje za pomoca kodu ?](episode-015/README.md)
 - [Odcinek 16 - Generowanie dokumentacji z kodu źródłowego](episode-016/README.md)
+- [Odcinek 17 - Gitleaks - weryfikacja czy w repozytorium Git nie ma poufnych informacji](episode-017/README.md)
+- [Odcinek 18 - Checkov - sprawdzanie kodu infrastrucktury pod kątem bezpieczeństwa](episode-018/README.md)
+- [Odcinek 19 - Super-Linter - dbanie o jakość kodu](episode-019/README.md)
+- [Odcinek 20 - k6s - generowanie testowego ruchu](episode-020/README.md)

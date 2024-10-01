@@ -1,0 +1,1 @@
+# Odcinek 17 - Gitleaks - weryfikacja czy w repozytorium Git nie ma poufnych informacji 

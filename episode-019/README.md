@@ -1,0 +1,1 @@
+# Odcinek 19 - Super-Linter - dbanie o jakość kodu 

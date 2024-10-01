@@ -1,0 +1,1 @@
+# Odcinek 18 - Checkov - sprawdzanie kodu infrastrucktury pod kątem bezpieczeństwa 
