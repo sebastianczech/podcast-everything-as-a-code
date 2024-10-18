@@ -1,7 +1,7 @@
 # Odcinek 17 - Gitleaks - weryfikacja czy w repozytorium Git nie ma poufnych informacji
 
 
-Narzędzie:
+Narzędzia:
 - [gitleaks](https://github.com/gitleaks/gitleaks)
 - [gitleaks-action](https://github.com/gitleaks/gitleaks-action)
 
