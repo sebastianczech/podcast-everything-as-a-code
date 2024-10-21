@@ -19,4 +19,4 @@
 - [Odcinek 17 - Gitleaks - weryfikacja czy w repozytorium Git nie ma poufnych informacji](episode-017/README.md)
 - [Odcinek 18 - Checkov - sprawdzanie kodu infrastrucktury pod kątem bezpieczeństwa](episode-018/README.md)
 - [Odcinek 19 - Super-Linter - dbanie o jakość kodu](episode-019/README.md)
-- [Odcinek 20 - k6s - generowanie testowego ruchu](episode-020/README.md)
+- [Odcinek 20 - k6 - generowanie testowego ruchu](episode-020/README.md)
