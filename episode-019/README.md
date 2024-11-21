@@ -26,5 +26,8 @@ Przykłady:
       - name: Super-linter
         uses: super-linter/super-linter@v7.1.0
         env:
+          VALIDATE_CHECKOV: ${{ vars.VALIDATE_CHECKOV }}
+          VALIDATE_GITLEAKS: ${{ vars.VALIDATE_GITLEAKS }}
+          VALIDATE_YAML: ${{ vars.VALIDATE_YAML }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
